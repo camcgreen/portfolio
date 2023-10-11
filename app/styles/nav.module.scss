@@ -5,10 +5,42 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 50px;
+    // padding: 50px;
+    padding: 20px;
     z-index: 10;
+    img {
+      // width: 28px;
+      width: 20px;
+    }
 }
 
-.nav img {
-  width: 28px;
+@media (min-width: 768px) {
+  .nav {
+    padding: 30px;
+    img {
+      width: 20px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  
+}
+
+@media (min-width: 1200px) {
+  .nav {
+    padding: 40px;
+    img {
+      width: 24px;
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  .nav {
+    padding: 50px;
+    img {
+      width: 28px;
+    }
+  }
 }

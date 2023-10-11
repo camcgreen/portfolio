@@ -7,6 +7,7 @@ import { ScrollSmoother } from 'gsap/dist/ScrollSmoother'
 import Header from './components/header'
 import Projects from './components/projects'
 import styles from './styles/page.module.scss'
+import About from './components/about'
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
 
@@ -22,6 +23,7 @@ export default function Home() {
   return (
     <main>
       <Header />
+      <About />
       <Projects />
     </main>
   )

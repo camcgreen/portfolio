@@ -15,25 +15,22 @@ const Header = () => {
       type: 'chars, words, lines',
       linesClass: 'line-parent',
     })
-    gsap.from(split.lines, {
+    gsap.from(split.chars, {
+      delay: 0,
       duration: 2,
+      x: -200,
       y: 200,
+      skewX: 50,
       ease: 'power4.out',
       stagger: {
-        amount: 0.3,
+        amount: 0.5,
       },
     })
   }, [])
   return (
     <header className={styles.header}>
       <h1 id='split'>
-        I build interactive{' '}
-        {/* <img
-          src='https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcSmu5XUvpDP0zc-LlTqVH1namBVv3nPbzYKFokoSOO3o4wOKkmxaoyXVc0mEusL7mdvDaI5_qMBt67stt0'
-          alt=''
-          className={styles.img}
-        /> */}
-        <br />
+        I build interactive <br />
         experiences for the web.
       </h1>
       <img src='/images/hero.jpeg' alt='' />

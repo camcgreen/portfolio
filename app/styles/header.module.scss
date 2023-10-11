@@ -1,27 +1,67 @@
 @use './variables' as variables;
 
 .header {
-  padding: 305px 0 307px;
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.header h1 {
-  margin-bottom: 400px;
-  text-align: center;
-  margin-bottom: 240px;
+  h1 {
+    text-align: center;
+  }
+  img {
+    width: 100%;
+    height: 750px;
+    object-fit: cover;
+    // border-radius: variables.$borderRadiusLarge;
+  }
 }
 
 .header img {
-  width: 100%;
-  height: 750px;
-  padding: 0 140px;
-  // border-radius: variables.$borderRadiusLarge;
+
 }
 
-.img {
-  width: 2000px !important;
-  // height: 10px !important;
+.header {
+  padding: 150px 0 0 0;
+  margin-bottom: 135px;
+  h1 {
+    margin-bottom: 80px;
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    padding: 200px 0 0 0;
+    margin-bottom: 150px;
+    h1 {
+      margin-bottom: 150px;
+    }
+    img {
+      padding: 0 90px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .header {
+    img {
+      padding: 0 140px;
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  .header {
+    padding: 300px 0 0 0;
+    margin-bottom: 300px;
+    h1 {
+      margin-bottom: 200px;
+    }
+    img {
+      padding: 0 140px;
+    }
+  }
 }
