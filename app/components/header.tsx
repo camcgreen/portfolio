@@ -26,12 +26,13 @@ const Header = () => {
   }, [])
   return (
     <header className={styles.header}>
-      {/* <h1 id='split'>
-        Creative developer <br />
-        for the web.
-      </h1> */}
       <h1 id='split'>
-        I build interactive
+        I build interactive{' '}
+        {/* <img
+          src='https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcSmu5XUvpDP0zc-LlTqVH1namBVv3nPbzYKFokoSOO3o4wOKkmxaoyXVc0mEusL7mdvDaI5_qMBt67stt0'
+          alt=''
+          className={styles.img}
+        /> */}
         <br />
         experiences for the web.
       </h1>

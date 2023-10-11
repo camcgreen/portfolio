@@ -1,9 +1,27 @@
 import './styles/globals.scss'
 import type { Metadata } from 'next'
-import { Lexend_Deca } from 'next/font/google'
+import localFont from 'next/font/local'
 import Nav from './components/nav'
 
-const lexendDeca = Lexend_Deca({ subsets: ['latin'] })
+const HelveticaNeueExtended = localFont({
+  src: [
+    {
+      path: './fonts/HelveticaNeueExtended-Light.otf',
+      weight: '300',
+      style: 'normal',
+    },
+    {
+      path: './fonts/HelveticaNeueExtended-Regular.otf',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: './fonts/HelveticaNeueExtended-Bold.otf',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
+})
 
 export const metadata: Metadata = {
   title: 'Cam Green - Interactive Developer',
@@ -19,7 +37,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={lexendDeca.className}>
+      <body className={HelveticaNeueExtended.className}>
         <Nav />
         <div className='smooth-wrapper'>
           <div className='smooth-content'>{children}</div>
