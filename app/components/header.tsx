@@ -32,7 +32,7 @@ const Header = () => {
   }, [])
   return (
     <header className={styles.header}>
-      <Canvas camera={{ position: [0, 0, 2] }}>
+      <Canvas camera={{ position: [0, 0, 1] }}>
         <Sphere />
         <OrbitControls />
       </Canvas>
