@@ -2,16 +2,13 @@
 
 .header {
   display: flex;
+  width: 100%;
+  height: 100svh;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   h1 {
     text-align: center;
-  }
-  img {
-    width: 100%;
-    height: 750px;
-    object-fit: cover;
-    // border-radius: variables.$borderRadiusLarge;
   }
 }
 
@@ -20,48 +17,5 @@
 }
 
 .header {
-  padding: 150px 0 0 0;
-  margin-bottom: 135px;
-  h1 {
-    margin-bottom: 80px;
-  }
-}
 
-@media (min-width: 768px) {
-  .header {
-  }
-}
-
-@media (min-width: 1024px) {
-  .header {
-    padding: 200px 0 0 0;
-    margin-bottom: 150px;
-    h1 {
-      margin-bottom: 150px;
-    }
-    img {
-      padding: 0 90px;
-    }
-  }
-}
-
-@media (min-width: 1200px) {
-  .header {
-    img {
-      padding: 0 140px;
-    }
-  }
-}
-
-@media (min-width: 1600px) {
-  .header {
-    padding: 300px 0 0 0;
-    margin-bottom: 300px;
-    h1 {
-      margin-bottom: 200px;
-    }
-    img {
-      padding: 0 140px;
-    }
-  }
 }

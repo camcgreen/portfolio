@@ -38,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={HelveticaNeueExtended.className}>
-        <Nav />
+        {/* <Nav /> */}
         <div className='smooth-wrapper'>
           <div className='smooth-content'>{children}</div>
         </div>

@@ -18,7 +18,7 @@ const Header = () => {
     gsap.from(split.chars, {
       delay: 0,
       duration: 2,
-      x: -200,
+      x: 40,
       y: 200,
       skewX: 50,
       ease: 'power4.out',
@@ -33,7 +33,6 @@ const Header = () => {
         I build interactive <br />
         experiences for the web.
       </h1>
-      <img src='/images/hero.jpeg' alt='' />
     </header>
   )
 }
