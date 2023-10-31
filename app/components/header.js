@@ -2,9 +2,12 @@
 
 import React, { useEffect } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls } from '@react-three/drei'
+import { BlendFunction } from 'postprocessing'
+import { EffectComposer, DotScreen } from '@react-three/postprocessing'
+import { CustomDotScreen } from '@/app/shaders/PostProcess'
 import Dome from '@/app/components/Dome'
 import Sphere from '@/app/components/Sphere'
+import { OrbitControls } from '@react-three/drei'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import { SplitText } from 'gsap/dist/SplitText'
@@ -36,6 +39,9 @@ const Header = () => {
       <Canvas camera={{ position: [0, 0, 1] }}>
         <Dome />
         <Sphere />
+        <EffectComposer>
+          <CustomDotScreen blendFunction={BlendFunction.NORMAL} />
+        </EffectComposer>
         <OrbitControls />
       </Canvas>
       {/* <h1 id='split'>
