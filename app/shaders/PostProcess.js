@@ -1,10 +1,11 @@
 import React, { forwardRef, useMemo } from 'react'
 import { Uniform, Vector2 } from 'three'
 import { Effect } from 'postprocessing'
+import { BlendFunction } from 'postprocessing'
 
 export class DotScreenEffect extends Effect {
   constructor({
-    blendFunction,
+    blendFunction = BlendFunction.NORMAL,
     angle = 1.57,
     scale = 1.0,
     center = new Vector2(0.5, 0.5),
@@ -27,7 +28,7 @@ export class DotScreenEffect extends Effect {
       
       float random(vec2 p) {
         vec2 k1 = vec2(23.14069263277926, 2.665144142690225);
-        return fract(cos(dot(p, k1)) * 12345.6789);
+        return fract(cos(dot(p, k1)) * 12345.6789) - 0.5;
       }
       
       void mainImage(const in vec4 inputColor, const in vec2 uv, out vec4 outputColor) {
