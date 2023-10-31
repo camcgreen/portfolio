@@ -6,12 +6,12 @@ import '@/app/shaders/LavaMaterial'
 const Dome = () => {
   const domeRef = useRef()
   useFrame((state) => {
-    const time = state.clock.getElapsedTime()
+    const time = state.clock.getElapsedTime() / 2
     domeRef.current.material.uniforms.uTime.value = time
   })
   return (
     <mesh ref={domeRef}>
-      <sphereGeometry args={[1, 32, 32]} />
+      <sphereGeometry args={[1.5, 32, 32]} />
       <lavaMaterial side={THREE.DoubleSide} />
     </mesh>
   )

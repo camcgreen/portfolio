@@ -2,6 +2,7 @@
 
 import React, { useEffect } from 'react'
 import { Canvas } from '@react-three/fiber'
+import { TransformControls } from '@react-three/drei'
 import { BlendFunction } from 'postprocessing'
 import { EffectComposer, DotScreen } from '@react-three/postprocessing'
 import { CustomDotScreen } from '@/app/shaders/PostProcess'
@@ -38,16 +39,24 @@ const Header = () => {
     <header className={styles.header}>
       <Canvas camera={{ position: [0, 0, 1] }}>
         <Dome />
-        <Sphere />
+        <Sphere position={[0, 0, 0]} scale={[1, 1, 1]} />
         <EffectComposer>
-          <CustomDotScreen blendFunction={BlendFunction.NORMAL} />
+          <CustomDotScreen />
         </EffectComposer>
-        <OrbitControls />
+        {/* <OrbitControls /> */}
       </Canvas>
-      {/* <h1 id='split'>
-        I build interactive <br />
-        experiences for the web.
-      </h1> */}
+      <h1
+        id='split'
+        style={{
+          position: 'absolute',
+          left: '50%',
+          top: '50%',
+          transform: 'translate(-50%, -50%)',
+          color: 'white',
+        }}
+      >
+        CREATIVE DEVELOPER.
+      </h1>
     </header>
   )
 }

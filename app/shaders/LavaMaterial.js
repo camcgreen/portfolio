@@ -67,9 +67,12 @@ const LavaMaterial = shaderMaterial(
     vec3 color2 = vec3(0.0, 1.0, 0.0);
     vec3 color3 = vec3(0.0, 0.0, 1.0);
 
-    vec2 baseUV = rotate2D(n) * vPosition.xy * 0.1;
-    float basePattern = lines(baseUV, 0.5);
-    float secondPattern = lines(baseUV, 0.1);
+    vec2 baseUV = rotate2D(n) * vPosition.xy * 0.01;
+    float basePattern = lines(baseUV, 0.75);
+    // control day and night
+    float daylight = sin(uTime * 1.0);
+    float remappedDaylight = mix(0.3, 0.65, (daylight + 1.0) * 0.65);
+    float secondPattern = lines(baseUV, remappedDaylight);
 
     vec3 baseColor = mix(baseSecond, baseFirst, basePattern);
     vec3 secondBaseColor = mix(baseColor, accent, secondPattern);

@@ -28,7 +28,7 @@ export class DotScreenEffect extends Effect {
       
       float random(vec2 p) {
         vec2 k1 = vec2(23.14069263277926, 2.665144142690225);
-        return fract(cos(dot(p, k1)) * 12345.6789) - 0.5;
+        return fract(cos(dot(p, k1)) * 12345.6789) - 0.75;
       }
       
       void mainImage(const in vec4 inputColor, const in vec2 uv, out vec4 outputColor) {

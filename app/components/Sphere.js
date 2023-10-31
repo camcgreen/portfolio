@@ -3,7 +3,7 @@ import * as THREE from 'three'
 import { useFrame, useThree } from '@react-three/fiber'
 import '@/app/shaders/LavaMiniMaterial'
 
-const Sphere = () => {
+const Sphere = ({ ...props }) => {
   const { scene, gl } = useThree()
   const sphereRef = useRef()
   const cubeRenderTarget = useRef(
@@ -35,8 +35,8 @@ const Sphere = () => {
   })
 
   return (
-    <mesh ref={sphereRef}>
-      <sphereGeometry args={[0.25, 32, 32]} />
+    <mesh ref={sphereRef} {...props}>
+      <sphereGeometry args={[1, 64, 64]} />
       <lavaMiniMaterial side={THREE.DoubleSide} />
     </mesh>
   )
