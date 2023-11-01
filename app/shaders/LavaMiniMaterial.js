@@ -63,7 +63,6 @@ const LavaMiniMaterial = shaderMaterial(
     gl_FragColor = mix(refractedColor, reflectedColor, clamp(vReflectionFactor, 0.0, 1.0));
     // gl_FragColor = refractedColor;
     // gl_FragColor = vec4(vec3(vReflectionFactor), 1.0);
-    // gl_FragColor = vec4(vec3(vReflectionFactor),1.);
     // gl_FragColor = reflectedColor;
   }
   `

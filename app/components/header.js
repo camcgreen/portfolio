@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { TransformControls } from '@react-three/drei'
 import { BlendFunction } from 'postprocessing'
@@ -13,10 +13,29 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import { SplitText } from 'gsap/dist/SplitText'
 import styles from '../styles/header.module.scss'
+import Nav from './nav'
 
 gsap.registerPlugin(ScrollTrigger, SplitText)
 
+const titles = [
+  'DEVELOPER EXTRAORDINAIRRE',
+  'PERSON',
+  'MORE TEXT TEXT TEXT LOTS OF IT',
+  'COOL',
+]
+const intervalMs = 4000
+
 const Header = () => {
+  const [selectedIndex, setSelectedIndex] = useState(0)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSelectedIndex((selectedIndex) => (selectedIndex + 1) % titles.length)
+    }, intervalMs)
+
+    return () => {
+      clearInterval(interval)
+    }
+  }, [])
   useEffect(() => {
     const heading = document.getElementById('split')
     const split = new SplitText(heading, {
@@ -34,7 +53,21 @@ const Header = () => {
         amount: 0.5,
       },
     })
-  }, [])
+
+    setTimeout(() => {
+      gsap.to(split.chars, {
+        delay: 0,
+        duration: 1,
+        x: -40,
+        y: -200,
+        skewX: 50,
+        ease: 'power4.in',
+        stagger: {
+          amount: 0.5,
+        },
+      })
+    }, intervalMs - 1500)
+  }, [selectedIndex])
   return (
     <header className={styles.header}>
       <Canvas camera={{ position: [0, 0, 1] }}>
@@ -45,18 +78,8 @@ const Header = () => {
         </EffectComposer>
         {/* <OrbitControls /> */}
       </Canvas>
-      <h1
-        id='split'
-        style={{
-          position: 'absolute',
-          left: '50%',
-          top: '50%',
-          transform: 'translate(-50%, -50%)',
-          color: 'white',
-        }}
-      >
-        CREATIVE DEVELOPER.
-      </h1>
+      <Nav />
+      <h1 id='split'>{titles[selectedIndex]}</h1>
     </header>
   )
 }

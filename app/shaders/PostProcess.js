@@ -34,7 +34,7 @@ export class DotScreenEffect extends Effect {
       void mainImage(const in vec4 inputColor, const in vec2 uv, out vec4 outputColor) {
         vec2 uvrandom = uv;
         uvrandom.y *= random(vec2(uvrandom.y, 0.4));
-        vec3 color = inputColor.rgb + random(uvrandom) * 0.1;
+        vec3 color = inputColor.rgb + random(uvrandom) * 0.07;
         outputColor = vec4(color, inputColor.a);
       }
     `,

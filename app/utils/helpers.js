@@ -8,7 +8,7 @@ export function easeOutCubic(t) {
 }
 
 export function handleCardShuffling() {
-  console.log("woo")
+  console.log('woo')
 }
 
 export function calculateProjectIndex(scrollLevel, numCards) {
