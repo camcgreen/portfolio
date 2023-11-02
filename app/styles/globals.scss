@@ -11,6 +11,30 @@
   color: #fff;
 }
 
+/* For Webkit browsers like Chrome, Safari */
+::-webkit-scrollbar {
+  width: 10px; /* Adjust width of the scrollbar */
+  height: 10px; /* Adjust height for horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent !important; /* Ensure the track is transparent */
+  display: none; /* Hide the track */
+  width: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: white; /* Color of the scroll thumb */
+  border-radius: 0; /* Makes it square */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: white transparent;
+}
+
+
 html,
 body {
   max-width: 100vw;
@@ -32,22 +56,13 @@ h1 {
 section {
   display: flex;
   flex-direction: column;
+  // justify-content: center;
   align-items: center;
-  letter-spacing: -0.03em;
-  margin-bottom: 300px;
-  h2 {
-    color: variables.$colorSecondary;
-    font-weight: 300;
-    font-size: 32px;
-    margin-bottom: 300px;
-    max-width: 730px;
-    text-align: center;
-    line-height: 42px;
-    span {
-      color: variables.$colorPrimary;
-      font-weight: 500;
-    }
-  }
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
 }
 
 .line-parent {

@@ -18,10 +18,10 @@ import Nav from './nav'
 gsap.registerPlugin(ScrollTrigger, SplitText)
 
 const titles = [
-  'DEVELOPER EXTRAORDINAIRRE',
-  'PERSON',
-  'MORE TEXT TEXT TEXT LOTS OF IT',
-  'COOL',
+  "HEY, I'M CAM GREEN 👋",
+  "I'M AN EXPERIENCED FRONTEND DEVELOPER 👨🏻‍💻",
+  // "WITH SEVERAL YEARS' EXPERIENCE IN FRONTEND STACKS 📚",
+  "I'D LOVE TO BUILD SOMETHING EXCITING WITH YOU 🧪",
 ]
 const intervalMs = 4000
 
