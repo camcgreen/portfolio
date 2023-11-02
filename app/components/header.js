@@ -80,6 +80,11 @@ const Header = () => {
       </Canvas>
       <Nav />
       <h1 id='split'>{titles[selectedIndex]}</h1>
+      <img
+        className={styles.scroll}
+        src='/images/scroll.svg'
+        alt='Scroll down indicator'
+      />
     </header>
   )
 }
