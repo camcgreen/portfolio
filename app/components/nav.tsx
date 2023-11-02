@@ -10,7 +10,8 @@ const Nav = () => {
   return (
     <nav className={styles.nav}>
       <img src='/images/logo.svg' alt='' />
-      <ul>
+      <img src='/images/menu.svg' />
+      {/* <ul>
         <Link
           href='/'
           style={{
@@ -20,7 +21,7 @@ const Nav = () => {
           about
         </Link>
         <Link href='/projects'>projects</Link>
-      </ul>
+      </ul> */}
     </nav>
   )
 }
