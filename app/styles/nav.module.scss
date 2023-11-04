@@ -10,16 +10,4 @@
     img {
       width: 28px;
     }
-    ul {
-      * {
-        font-size: 1rem;
-        transition: opacity 0.3s ease-in-out;
-        &:first-of-type {
-          margin-right: 20px;
-        }
-        &:hover {
-          opacity: 0.75;
-        }
-      }
-    }
 }

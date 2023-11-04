@@ -12,36 +12,60 @@ const About = () => {
   return (
     <section className={`${styles.container}`}>
       <div className={`${styles.content} wrapper`}>
-        <div className={styles.skills}>
+        <div className={styles.about}>
           <h2>
             I GET EXCITED ABOUT
             <br />
-            INTERACTIVE THINGS
+            DIGITAL THINGS
           </h2>
+          <div className={styles.description}>
+            <p>
+              My name's Cam and I'm a software engineer based in Manchester, UK.
+              I specialise in building and designing exceptional digital
+              experiences.
+            </p>
+            <p>
+              I'm currently focused on breathing life and interactivity into
+              live and digital events at{' '}
+              <a
+                href='https://voxelstudio.co.uk/'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                Voxel
+              </a>
+              , where I've built software for events from London to New York.
+            </p>
+            <p>
+              For high profile clients, I've built full-stack web apps with
+              Next.js and Firebase, native desktop apps with Electron, and iOS
+              apps with React Native.
+            </p>
+            {/* <p>
+              You find my GitHub{' '}
+              <a
+                href='https://github.com/camcgreen'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                here
+              </a>
+              .
+            </p> */}
+            <p>Here are a few technologies I've been working with recently:</p>
+            <ul>
+              <li>JavaScript (ES6+)</li>
+              <li>CSS & SASS</li>
+              <li>React</li>
+              <li>Electron</li>
+              <li>Node.js</li>
+              <li>React Native</li>
+            </ul>
+          </div>
         </div>
-        <div className={styles.description}>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa
-            mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien
-            fringilla, mattis ligula consectetur, ultrices mauris. Maecenas
-            vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor
-            ornare leo, non suscipit magna interdum eu. Curabitur pellentesque
-            nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo
-            lacus at sodales sodales. Quisque sagittis orci ut diam condimentum,
-            vel euismod erat placerat. In iaculis arcu eros, eget tempus orci
-            facilisis id.Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit. Ut et massa mi.
-          </p>
-          <p>
-            Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla,
-            mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis
-            tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo,
-            non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at
-            maximus ante fermentum sit amet. Pellentesque commodo lacus at
-            sodales sodales. Quisque sagittis orci ut diam condimentum, vel
-            euismod erat placerat. In iaculis arcu eros, eget tempus orci
-            facilisis id.
-          </p>
+        <div className={styles.profile}>
+          <div className={styles.bgCircle} />
+          <img className={styles.profileImg} src='/images/pp.jpg' alt='' />
         </div>
       </div>
     </section>

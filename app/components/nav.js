@@ -11,17 +11,6 @@ const Nav = () => {
     <nav className={styles.nav}>
       <img src='/images/logo.svg' alt='' />
       <img src='/images/menu.svg' />
-      {/* <ul>
-        <Link
-          href='/'
-          style={{
-            textDecoration: pathname === '/' ? 'underline' : 'none',
-          }}
-        >
-          about
-        </Link>
-        <Link href='/projects'>projects</Link>
-      </ul> */}
     </nav>
   )
 }

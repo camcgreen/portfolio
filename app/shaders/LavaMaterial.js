@@ -58,7 +58,8 @@ const LavaMaterial = shaderMaterial(
   }
 
   void main() {
-    vec3 baseFirst = vec3(120.0 / 255.0, 158.0 / 255.0, 113.0 / 255.0);
+    // vec3 baseFirst = vec3(120.0 / 255.0, 158.0 / 255.0, 113.0 / 255.0);
+    vec3 baseFirst = vec3(28.0 / 255.0, 58.0 / 255.0, 103.0 / 255.0);
     vec3 accent = vec3(0.0, 0.0, 0.0);
     vec3 baseSecond = vec3(224.0 / 255.0, 148.0 / 255.0, 66.0 / 255.0);
     // vec3 baseThird = vec3(232.0 / 255.0, 201.0 / 255.0, 73.0 / 255.0);

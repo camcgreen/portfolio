@@ -13,13 +13,12 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import { SplitText } from 'gsap/dist/SplitText'
 import styles from '../styles/header.module.scss'
-import Nav from './nav'
 
 gsap.registerPlugin(ScrollTrigger, SplitText)
 
 const titles = [
   "HEY, I'M CAM GREEN 👋",
-  "I'M AN EXPERIENCED FRONTEND DEVELOPER 👨🏻‍💻",
+  "I'M AN EXPERIENCED SOFTWARE ENGINEER 👨🏻‍💻",
   // "WITH SEVERAL YEARS' EXPERIENCE IN FRONTEND STACKS 📚",
   "I'D LOVE TO BUILD SOMETHING EXCITING WITH YOU 🧪",
 ]
@@ -76,9 +75,7 @@ const Header = () => {
         <EffectComposer>
           <CustomDotScreen />
         </EffectComposer>
-        {/* <OrbitControls /> */}
       </Canvas>
-      <Nav />
       <h1 id='split'>{titles[selectedIndex]}</h1>
       <img
         className={styles.scroll}

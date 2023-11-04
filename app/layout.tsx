@@ -2,6 +2,7 @@ import './styles/globals.scss'
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import Nav from './components/nav'
+import Footer from './components/footer'
 
 const HelveticaNeueExtended = localFont({
   src: [
@@ -38,9 +39,12 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={HelveticaNeueExtended.className}>
-        {/* <Nav /> */}
+        <Nav />
         <div className='smooth-wrapper'>
-          <div className='smooth-content'>{children}</div>
+          <div className='smooth-content'>
+            {children}
+            <Footer />
+          </div>
         </div>
       </body>
     </html>
