@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className={styles.container}>
       <div className='wrapper'>
         <div className={styles.content}>
-          <p>Let's talk!</p>
+          <p>Let&apos;s talk!</p>
           <a
             href='mailto:hello@camgreen.works'
             target='_blank'

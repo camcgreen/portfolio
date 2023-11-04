@@ -20,13 +20,13 @@ const About = () => {
           </h2>
           <div className={styles.description}>
             <p>
-              My name's Cam and I'm a software engineer based in Manchester, UK.
-              I specialise in building and designing exceptional digital
-              experiences.
+              My name&apos;s Cam and I&apos;m a software engineer based in
+              Manchester, UK. I specialise in building and designing exceptional
+              digital experiences.
             </p>
             <p>
-              I'm currently focused on breathing life and interactivity into
-              live and digital events at{' '}
+              I&apos;m currently focused on breathing life and interactivity
+              into live and digital events at{' '}
               <a
                 href='https://voxelstudio.co.uk/'
                 target='_blank'
@@ -34,10 +34,11 @@ const About = () => {
               >
                 Voxel
               </a>
-              , where I've built software for events from London to New York.
+              , where I&apos;ve built software for events from London to New
+              York.
             </p>
             <p>
-              For high profile clients, I've built full-stack web apps with
+              For high profile clients, I&apos;ve built full-stack web apps with
               Next.js and Firebase, native desktop apps with Electron, and iOS
               apps with React Native.
             </p>
@@ -52,7 +53,9 @@ const About = () => {
               </a>
               .
             </p> */}
-            <p>Here are a few technologies I've been working with recently:</p>
+            <p>
+              Here are a few technologies I&apos;ve been working with recently:
+            </p>
             <ul>
               <li>JavaScript (ES6+)</li>
               <li>CSS & SASS</li>

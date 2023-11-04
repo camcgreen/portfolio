@@ -14,9 +14,9 @@ const Projects = () => {
       <div className={`${styles.content} wrapper`}>
         <div className={styles.projects}>
           <h2>
-            SOME THINGS
+            SOME OF
             <br />
-            I'VE BUILT
+            MY WORK
           </h2>
           <div className={styles.project}>
             <div className={styles.hero}>

@@ -87,3 +87,5 @@ export const CustomDotScreen = forwardRef(({ param }, ref) => {
   const effect = useMemo(() => new DotScreenEffect(param), [param])
   return <primitive ref={ref} object={effect} dispose={null} />
 })
+
+CustomDotScreen.displayName = 'CustomDotScreen'
