@@ -17,7 +17,7 @@ import styles from '../styles/header.module.scss'
 gsap.registerPlugin(ScrollTrigger, SplitText)
 
 const titles = [
-  "HEY, I'M CAM GREEN 👋",
+  "HEY, I'M CAM 👋",
   "I'M AN EXPERIENCED SOFTWARE ENGINEER 👨🏻‍💻",
   // "WITH SEVERAL YEARS' EXPERIENCE IN FRONTEND STACKS 📚",
   "I'D LOVE TO BUILD SOMETHING EXCITING WITH YOU 🧪",
