@@ -26,7 +26,7 @@ const About = () => {
             <p>
               My name&apos;s Cam and I&apos;m a software engineer based in
               Manchester, UK. I focus on developing (and designing) remarkable
-              digital user experiences.
+              digital experiences.
             </p>
             <p>
               I&apos;m currently focused on breathing life and interactivity
