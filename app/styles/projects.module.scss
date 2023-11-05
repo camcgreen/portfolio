@@ -1,5 +1,7 @@
+@use './variables' as variables;
+
 .projects {
-  padding-bottom: 120px;
+  padding-bottom: 100px;
 }
 
 .project {
@@ -7,6 +9,9 @@
   flex-direction: column;
   width: 100%;
   margin-bottom: 80px;
+  &:last-of-type {
+   margin-bottom: 0; 
+  }
   h3 {
     margin-bottom: 20px;
   }
@@ -24,7 +29,7 @@
   img {
     object-fit: cover;
     width: 100%;
-    height: 500px;
+    height: 120%;
     transition: scale 0.3s ease-in-out;
   }
   &:hover {
@@ -49,5 +54,11 @@
   transition: filter 0.3s ease-in-out;
   &:hover {
     filter: brightness(0.8)
+  }
+}
+
+@media(max-width: variables.$mediaPhone) {
+  .hero {
+    height: 200px;
   }
 }

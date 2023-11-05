@@ -18,8 +18,7 @@ gsap.registerPlugin(ScrollTrigger, SplitText)
 
 const titles = [
   "HEY, I'M CAM 👋",
-  "I'M AN EXPERIENCED SOFTWARE ENGINEER 👨🏻‍💻",
-  // "WITH SEVERAL YEARS' EXPERIENCE IN FRONTEND STACKS 📚",
+  "I'M A SOFTWARE ENGINEER BASED IN MANCHESTER 👨🏻‍💻",
   "I'D LOVE TO BUILD SOMETHING EXCITING WITH YOU 🧪",
 ]
 const intervalMs = 4000
@@ -46,7 +45,8 @@ const Header = () => {
       duration: 2,
       x: 40,
       y: 200,
-      skewX: 50,
+      // skewX: 50,
+      // skewX: -90,
       ease: 'power4.out',
       stagger: {
         amount: 0.5,
@@ -59,7 +59,8 @@ const Header = () => {
         duration: 1,
         x: -40,
         y: -200,
-        skewX: 50,
+        // skewX: 50,
+        // skewX: 90,
         ease: 'power4.in',
         stagger: {
           amount: 0.5,

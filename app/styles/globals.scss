@@ -60,6 +60,7 @@ h1 {
 h2 {
   font-size: 2rem;
   margin-bottom: 40px;
+  text-wrap: nowrap;
 }
 
 h3 {
@@ -74,11 +75,16 @@ h4 {
 
 p {
   // font-size: 1.25rem;
+  font-weight: 300;
+}
+
+li {
+  font-weight: 300;
 }
 
 section {
-    width: 100%;
-    padding-top: 200px;
+  width: 100%;
+  padding-top: 100px;
   display: flex;
   flex-direction: column;
   // justify-content: center;
@@ -133,4 +139,35 @@ button {
 
 .line-parent {
   overflow: hidden;
+}
+
+@media (max-width: variables.$mediaDesktopSmall) {
+  h1 {
+    font-size: 3rem;
+  }
+  .wrapper {
+    max-width: 1000px;
+  }
+}
+
+@media (max-width: variables.$mediaTablet) {
+  h1 {
+    font-size: 2rem;
+    width: 70%;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  .wrapper {
+    max-width: 800px;
+  }
+}
+
+@media (max-width: variables.$mediaPhone) {
+  h1 {
+    width: 90%;
+  }
+  .wrapper {
+    width: 90%;
+  }
 }

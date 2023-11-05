@@ -18,11 +18,15 @@ const About = () => {
             <br />
             DIGITAL THINGS
           </h2>
+          <div className={styles.profile}>
+            <div className={styles.bgCircle} />
+            <img className={styles.profileImg} src='/images/pp.jpg' alt='' />
+          </div>
           <div className={styles.description}>
             <p>
               My name&apos;s Cam and I&apos;m a software engineer based in
-              Manchester, UK. I specialise in building and designing exceptional
-              digital experiences.
+              Manchester, UK. I focus on developing (and designing) remarkable
+              digital user experiences.
             </p>
             <p>
               I&apos;m currently focused on breathing life and interactivity
@@ -65,10 +69,6 @@ const About = () => {
               <li>React Native</li>
             </ul>
           </div>
-        </div>
-        <div className={styles.profile}>
-          <div className={styles.bgCircle} />
-          <img className={styles.profileImg} src='/images/pp.jpg' alt='' />
         </div>
       </div>
     </section>

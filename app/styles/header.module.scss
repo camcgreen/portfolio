@@ -37,3 +37,9 @@
   transform: translateX(-50%);
   animation: rotate 8s linear infinite;
 }
+
+@media (max-width: variables.$mediaTablet) {
+  .scroll {
+    width: 96px;
+  }
+}
