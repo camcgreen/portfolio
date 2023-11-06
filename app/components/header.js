@@ -45,8 +45,6 @@ const Header = () => {
       duration: 2,
       x: 40,
       y: 200,
-      // skewX: 50,
-      // skewX: -90,
       ease: 'power4.out',
       stagger: {
         amount: 0.5,
@@ -59,8 +57,6 @@ const Header = () => {
         duration: 1,
         x: -40,
         y: -200,
-        // skewX: 50,
-        // skewX: 90,
         ease: 'power4.in',
         stagger: {
           amount: 0.5,
