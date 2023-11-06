@@ -11,21 +11,16 @@
   color: #fff;
 }
 
-/* For Webkit browsers like Chrome, Safari */
 ::-webkit-scrollbar {
-  width: 10px; /* Adjust width of the scrollbar */
-  height: 10px; /* Adjust height for horizontal scrollbar */
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent !important; /* Ensure the track is transparent */
-  display: none; /* Hide the track */
-  width: 0;
+  background: black;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: white; /* Color of the scroll thumb */
-  border-radius: 0; /* Makes it square */
+  background: white;
 }
 
 /* For Firefox */

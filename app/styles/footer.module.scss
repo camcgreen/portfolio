@@ -4,12 +4,22 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 100px 0;
-  background: rgba(255, 255, 255, 0.05);
+  padding: 40px 0;
+  background: rgb(20, 20, 20);
   color: white;
 }
 
 .content {
   width: 100%;
   // font-size: 1rem;
+  display: flex;
+  align-items: center;
+  a {
+    margin-right: 20px;
+  }
+}
+
+.mail {
+  width: 12px;
+  margin-right: 20px;
 }
