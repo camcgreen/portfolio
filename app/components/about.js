@@ -38,8 +38,8 @@ const About = () => {
               >
                 Voxel
               </a>
-              , where I&apos;ve built software for events from London to New
-              York.
+              , where I&apos;ve built software for activations from London to
+              New York.
             </p>
             <p>
               For high profile clients, I&apos;ve built full-stack web apps with
@@ -61,9 +61,9 @@ const About = () => {
               Here are a few technologies I&apos;ve been working with recently:
             </p>
             <ul>
-              <li>JavaScript (ES6+)</li>
+              <li>TypeScript</li>
               <li>CSS & SASS</li>
-              <li>React</li>
+              <li>React & Next.js</li>
               <li>Electron</li>
               <li>Node.js</li>
               <li>React Native</li>
