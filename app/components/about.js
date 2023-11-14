@@ -62,7 +62,7 @@ const About = () => {
             </p>
             <ul>
               <li>TypeScript</li>
-              <li>CSS & SASS</li>
+              <li>CSS Modules</li>
               <li>React & Next.js</li>
               <li>Electron</li>
               <li>Node.js</li>
