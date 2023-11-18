@@ -9,8 +9,10 @@ const Nav = () => {
   const pathname = usePathname()
   return (
     <nav className={styles.nav}>
-      <img src='/images/logo.svg' alt='' />
-      <img src='/images/menu.svg' />
+      <Link href='/'>
+        <img src='/images/logo.svg' alt='' />
+      </Link>
+      {/* <img src='/images/menu.svg' /> */}
     </nav>
   )
 }

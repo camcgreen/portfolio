@@ -48,9 +48,14 @@
   * {
     cursor: pointer;
   }
+  a {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .github {
+  align-self: center;
   transition: filter 0.3s ease-in-out;
   &:hover {
     filter: brightness(0.8)
