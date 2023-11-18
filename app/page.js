@@ -19,7 +19,6 @@ export default function Home() {
       content: '.smooth-content',
       smooth: 1,
       effects: true,
-      // normalizeScroll: true,
     })
   }, [])
   return (

@@ -25,10 +25,10 @@ const HelveticaNeueExtended = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'Cam Green - Interactive Developer',
-  description: 'Interactive Developer based in Manchester, UK',
+  title: 'Cam Green - Software Engineer',
+  description: 'Software Engineer based in Manchester, UK',
   keywords:
-    'Developer, creative, professional, development, web, design, nextjs, react, figma, gsap, typescript, javascript, html, css, interactive, interaction, freelance',
+    'Developer, creative, professional, development, engineer, software, web, design, nextjs, react, figma, gsap, typescript, javascript, html, css, interactive, interaction, freelance, jobstasy, chatbox',
 }
 
 export default function RootLayout({
