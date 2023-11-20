@@ -1,5 +1,10 @@
+'use client'
 import './styles/globals.scss'
-import type { Metadata } from 'next'
+import { useEffect, useLayoutEffect } from 'react'
+import { usePathname } from 'next/navigation'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
+import { ScrollSmoother } from 'gsap/dist/ScrollSmoother'
 import localFont from 'next/font/local'
 import Nav from './components/nav'
 import Footer from './components/footer'
@@ -24,18 +29,27 @@ const HelveticaNeueExtended = localFont({
   ],
 })
 
-export const metadata: Metadata = {
-  title: 'Cam Green - Software Engineer',
-  description: 'Software Engineer based in Manchester, UK',
-  keywords:
-    'Developer, creative, professional, development, engineer, software, web, design, nextjs, react, figma, gsap, typescript, javascript, html, css, interactive, interaction, freelance, jobstasy, chatbox',
-}
+export default function RootLayout({ children }) {
+  const pathname = usePathname()
+  useLayoutEffect(() => {
+    console.log('new')
+    let ctx = gsap.context(() => {
+      gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
+      window.history.scrollRestoration = 'manual'
+      const smoother = ScrollSmoother.create({
+        wrapper: '.smooth-wrapper',
+        content: '.smooth-content',
+        smooth: 1,
+        effects: true,
+      })
+      ScrollTrigger.refresh()
+      smoother.refresh()
+    })
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+    return () => {
+      ctx.revert()
+    }
+  }, [pathname])
   return (
     <html lang='en'>
       <body className={HelveticaNeueExtended.className}>
