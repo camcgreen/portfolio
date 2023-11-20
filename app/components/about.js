@@ -16,7 +16,7 @@ const About = () => {
           <h2>
             I GET EXCITED ABOUT
             <br />
-            DIGITAL THINGS
+            DIGITAL THINGS.
           </h2>
           <div className={styles.profile}>
             <div className={styles.bgCircle} />

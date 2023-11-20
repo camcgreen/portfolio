@@ -17,7 +17,7 @@ const Projects = () => {
           <h2>
             SOME OF
             <br />
-            MY WORK
+            MY WORK.
           </h2>
           <div className={styles.project}>
             <Link href='/projects/jobstasy'>

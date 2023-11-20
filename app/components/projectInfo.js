@@ -15,7 +15,7 @@ const ProjectInfo = ({ tools, summary, linkProject, linkRepo }) => {
         <div className={styles.buttons}>
           <a href={linkProject} target='_blank' rel='noopener noreferrer'>
             <button className={styles.buttonsProjLink}>
-              <p>Launch project.</p>
+              <p>Launch project</p>
             </button>
           </a>
           <a href={linkRepo} target='_blank' rel='noopener noreferrer'>
