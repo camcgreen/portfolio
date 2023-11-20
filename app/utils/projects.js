@@ -1,5 +1,6 @@
 export const projectDetails = {
   jobstasy: {
+    id: 'jobstasy',
     title: 'Jobstasy',
     description: (
       <>
@@ -27,7 +28,6 @@ export const projectDetails = {
           reusable card component system, and to be easily navigated through
           using several different filters.
         </p>
-        ,
       </>
     ),
     imageFull1: '/images/jobstasy-full-1.jpg',
@@ -54,7 +54,7 @@ export const projectDetails = {
             rel='noopener noreferrer'
           >
             JobList.js
-          </a>
+          </a>{' '}
           component. Clicking on a job passes that specific job array data from
           the overall jobs object state as props to the{' '}
           <a
@@ -77,7 +77,7 @@ export const projectDetails = {
             rel='noopener noreferrer'
           >
             Likes.js
-          </a>
+          </a>{' '}
           component.
         </p>
       </>
@@ -102,6 +102,7 @@ export const projectDetails = {
     ),
   },
   chatbox: {
+    id: 'chatbox',
     title: 'Chatbox',
     description: (
       <>
@@ -129,7 +130,6 @@ export const projectDetails = {
           application because of its live database updates and relatively small
           learning curve.
         </p>
-        ,
       </>
     ),
     imageFull1: '/images/chatbox-full-1.jpg',
