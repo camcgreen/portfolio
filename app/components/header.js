@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useLayoutEffect, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { TransformControls } from '@react-three/drei'
 import { BlendFunction } from 'postprocessing'
@@ -8,13 +8,12 @@ import { EffectComposer, DotScreen } from '@react-three/postprocessing'
 import { CustomDotScreen } from '@/app/shaders/PostProcess'
 import Dome from '@/app/components/Dome'
 import Sphere from '@/app/components/Sphere'
+import { initAnimLandingHeader } from '../utils/animations'
 import { OrbitControls } from '@react-three/drei'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import { SplitText } from 'gsap/dist/SplitText'
 import styles from '../styles/header.module.scss'
-
-gsap.registerPlugin(ScrollTrigger, SplitText)
 
 const titles = [
   "HEY, I'M CAM 👋",
@@ -34,35 +33,8 @@ const Header = () => {
       clearInterval(interval)
     }
   }, [])
-  useEffect(() => {
-    const heading = document.getElementById('split')
-    const split = new SplitText(heading, {
-      type: 'chars, words, lines',
-      linesClass: 'line-parent',
-    })
-    gsap.from(split.chars, {
-      delay: 0,
-      duration: 2,
-      x: 40,
-      y: 200,
-      ease: 'power4.out',
-      stagger: {
-        amount: 0.5,
-      },
-    })
-
-    setTimeout(() => {
-      gsap.to(split.chars, {
-        delay: 0,
-        duration: 1,
-        x: -40,
-        y: -200,
-        ease: 'power4.in',
-        stagger: {
-          amount: 0.5,
-        },
-      })
-    }, intervalMs - 1500)
+  useLayoutEffect(() => {
+    initAnimLandingHeader(intervalMs)
   }, [selectedIndex])
   return (
     <header className={styles.header}>

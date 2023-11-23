@@ -142,6 +142,10 @@ button {
   overflow: hidden;
 }
 
+#split {
+  opacity: 0;
+}
+
 @media (max-width: variables.$mediaDesktopSmall) {
   h1 {
     font-size: 3rem;

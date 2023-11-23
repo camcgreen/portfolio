@@ -45,3 +45,38 @@ export const initAnimProjectHeader = () => {
     ease: 'power4.out',
   })
 }
+
+export const initAnimLandingHeader = (intervalMs) => {
+  gsap.registerPlugin(SplitText)
+  const heading = document.getElementById('split')
+  const split = new SplitText(heading, {
+    type: 'chars, words, lines',
+    linesClass: 'line-parent',
+  })
+  heading.style.opacity = 1
+  gsap.from(split.chars, {
+    delay: 0,
+    duration: 2,
+    opacity: 0,
+    x: 40,
+    y: 200,
+    ease: 'power4.out',
+    stagger: {
+      amount: 0.5,
+    },
+  })
+
+  setTimeout(() => {
+    gsap.to(split.chars, {
+      delay: 0,
+      duration: 1,
+      opacity: 1,
+      x: -40,
+      y: -200,
+      ease: 'power4.in',
+      stagger: {
+        amount: 0.5,
+      },
+    })
+  }, intervalMs - 1500)
+}
