@@ -32,7 +32,6 @@ const HelveticaNeueExtended = localFont({
 export default function RootLayout({ children }) {
   const pathname = usePathname()
   useLayoutEffect(() => {
-    console.log('new')
     let ctx = gsap.context(() => {
       gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
       window.history.scrollRestoration = 'manual'
@@ -51,16 +50,26 @@ export default function RootLayout({ children }) {
     }
   }, [pathname])
   return (
-    <html lang='en'>
-      <body className={HelveticaNeueExtended.className}>
-        <Nav />
-        <div className='smooth-wrapper'>
-          <div className='smooth-content'>
-            {children}
-            <Footer />
+    <>
+      <html lang='en'>
+        <title>
+          {pathname === '/'
+            ? 'Cam Green - Software Developer'
+            : `Projects - ${pathname
+                .split('/')[2]
+                .charAt(0)
+                .toUpperCase()}${pathname.split('/')[2].substr(1)}`}
+        </title>
+        <body className={HelveticaNeueExtended.className}>
+          <Nav />
+          <div className='smooth-wrapper'>
+            <div className='smooth-content'>
+              {children}
+              <Footer />
+            </div>
           </div>
-        </div>
-      </body>
-    </html>
+        </body>
+      </html>
+    </>
   )
 }

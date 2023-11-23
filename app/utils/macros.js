@@ -1,3 +1,6 @@
-export const EASING_SPEED = 0.05 / 2
-export const DELTA_FACTOR = 1
-export const LOCK_DELAY_MS = (EASING_SPEED * 10000) / 8
+export const TITLES = [
+  "HEY, I'M CAM 👋",
+  "I'M A SOFTWARE ENGINEER BASED IN MANCHESTER 👨🏻‍💻",
+  "I'D LOVE TO BUILD SOMETHING EXCITING WITH YOU 🧪",
+]
+export const INTERVAL_MS = 4000

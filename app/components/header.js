@@ -2,39 +2,26 @@
 
 import React, { useEffect, useLayoutEffect, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { TransformControls } from '@react-three/drei'
-import { BlendFunction } from 'postprocessing'
-import { EffectComposer, DotScreen } from '@react-three/postprocessing'
+import { EffectComposer } from '@react-three/postprocessing'
 import { CustomDotScreen } from '@/app/shaders/PostProcess'
 import Dome from '@/app/components/Dome'
 import Sphere from '@/app/components/Sphere'
 import { initAnimLandingHeader } from '../utils/animations'
-import { OrbitControls } from '@react-three/drei'
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
-import { SplitText } from 'gsap/dist/SplitText'
+import { TITLES, INTERVAL_MS } from '../utils/macros'
 import styles from '../styles/header.module.scss'
-
-const titles = [
-  "HEY, I'M CAM 👋",
-  "I'M A SOFTWARE ENGINEER BASED IN MANCHESTER 👨🏻‍💻",
-  "I'D LOVE TO BUILD SOMETHING EXCITING WITH YOU 🧪",
-]
-const intervalMs = 4000
 
 const Header = () => {
   const [selectedIndex, setSelectedIndex] = useState(0)
   useEffect(() => {
     const interval = setInterval(() => {
-      setSelectedIndex((selectedIndex) => (selectedIndex + 1) % titles.length)
-    }, intervalMs)
-
+      setSelectedIndex((selectedIndex) => (selectedIndex + 1) % TITLES.length)
+    }, INTERVAL_MS)
     return () => {
       clearInterval(interval)
     }
   }, [])
   useLayoutEffect(() => {
-    initAnimLandingHeader(intervalMs)
+    initAnimLandingHeader(INTERVAL_MS)
   }, [selectedIndex])
   return (
     <header className={styles.header}>
@@ -45,7 +32,7 @@ const Header = () => {
           <CustomDotScreen />
         </EffectComposer>
       </Canvas>
-      <h1 id='split'>{titles[selectedIndex]}</h1>
+      <h1 id='split'>{TITLES[selectedIndex]}</h1>
       <img
         className={styles.scroll}
         src='/images/scroll.svg'
