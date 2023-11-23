@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
   useEffect(() => {
     const pageTitle = getPageTitle(pathname)
     setTitle(pageTitle)
-  }, [])
+  }, [pathname])
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
