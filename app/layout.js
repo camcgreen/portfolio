@@ -1,7 +1,8 @@
 'use client'
 import './styles/globals.scss'
-import { useEffect, useLayoutEffect } from 'react'
+import { useEffect, useLayoutEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
+import { getPageTitle } from './utils/helpers'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import { ScrollSmoother } from 'gsap/dist/ScrollSmoother'
@@ -31,6 +32,11 @@ const HelveticaNeueExtended = localFont({
 
 export default function RootLayout({ children }) {
   const pathname = usePathname()
+  const [title, setTitle] = useState('')
+  useEffect(() => {
+    const pageTitle = getPageTitle(pathname)
+    setTitle(pageTitle)
+  }, [])
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
@@ -52,14 +58,7 @@ export default function RootLayout({ children }) {
   return (
     <>
       <html lang='en'>
-        <title>
-          {pathname === '/'
-            ? 'Cam Green - Software Developer'
-            : `Projects - ${pathname
-                .split('/')[2]
-                .charAt(0)
-                .toUpperCase()}${pathname.split('/')[2].substr(1)}`}
-        </title>
+        <title>{title}</title>
         <body className={HelveticaNeueExtended.className}>
           <Nav />
           <div className='smooth-wrapper'>
