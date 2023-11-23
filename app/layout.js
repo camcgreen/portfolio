@@ -59,6 +59,7 @@ export default function RootLayout({ children }) {
     <>
       <html lang='en'>
         <title>{title}</title>
+        <meta name='image' content='/images/cover.jpg'></meta>
         <body className={HelveticaNeueExtended.className}>
           <Nav />
           <div className='smooth-wrapper'>
