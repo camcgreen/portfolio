@@ -4,7 +4,6 @@ export const findProjIndex = (obj, id) => {
 }
 
 export const getPageTitle = (pathname) => {
-  console.log(pathname)
   switch (pathname) {
     case '/':
       return 'Cameron Green - Software Developer'
