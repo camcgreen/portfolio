@@ -1,5 +1,6 @@
 import './styles/globals.scss'
 import localFont from 'next/font/local'
+import { SITE_URL } from './utils/macros'
 import Nav from './components/nav'
 import Footer from './components/footer'
 import Smooth from './components/smooth'
@@ -25,13 +26,16 @@ const HelveticaNeueExtended = localFont({
 })
 
 export const metadata = {
+  metadataBase: new URL(SITE_URL),
   title: 'Cameron Green - Software Developer',
+  description:
+    'Cameron Green is a software developer based in Manchester, focused on building remarkable digital experiences.',
   openGraph: {
     title: 'Cameron Green',
     description:
       'Cameron Green is a software developer based in Manchester, focused on building remarkable digital experiences.',
-    url: 'https://camgreen.works',
-    siteName: 'https://camgreen.works',
+    url: SITE_URL,
+    siteName: SITE_URL,
     images: [
       {
         url: '/images/og.png',
