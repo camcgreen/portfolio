@@ -4,6 +4,5 @@ export const TITLES = [
   "I'D LOVE TO BUILD SOMETHING EXCITING WITH YOU 🧪",
 ]
 export const INTERVAL_MS = 4000
-// export const SITE_URL =
-//   'http://localhost:3000' || 'https://portfolio-nz79.vercel.app/'
-export const SITE_URL = 'https://portfolio-nz79.vercel.app/'
+export const SITE_URL =
+  'http://localhost:3000' || 'https://portfolio-nz79.vercel.app/'
