@@ -1,5 +1,4 @@
 'use client'
-
 import React from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
@@ -21,7 +20,7 @@ const Project = () => {
     proj && (
       <>
         <Head>
-          <title>Hello</title>
+          <title>Yo</title>
         </Head>
         <main>
           <ProjectHeader

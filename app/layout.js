@@ -1,14 +1,8 @@
-'use client'
 import './styles/globals.scss'
-import { useEffect, useLayoutEffect, useState } from 'react'
-import { usePathname } from 'next/navigation'
-import { getPageTitle } from './utils/helpers'
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
-import { ScrollSmoother } from 'gsap/dist/ScrollSmoother'
 import localFont from 'next/font/local'
 import Nav from './components/nav'
 import Footer from './components/footer'
+import Smooth from './components/smooth'
 
 const HelveticaNeueExtended = localFont({
   src: [
@@ -30,44 +24,41 @@ const HelveticaNeueExtended = localFont({
   ],
 })
 
-export default function RootLayout({ children }) {
-  const pathname = usePathname()
-  const [title, setTitle] = useState('')
-  useEffect(() => {
-    const pageTitle = getPageTitle(pathname)
-    setTitle(pageTitle)
-  }, [pathname])
-  useLayoutEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
-      window.history.scrollRestoration = 'manual'
-      const smoother = ScrollSmoother.create({
-        wrapper: '.smooth-wrapper',
-        content: '.smooth-content',
-        smooth: 1,
-        effects: true,
-      })
-      ScrollTrigger.refresh()
-      smoother.refresh()
-    })
+export const metadata = {
+  title: 'Cameron Green - Software Developer',
+  openGraph: {
+    title: 'Cameron Green',
+    description:
+      'Cameron Green is a software developer based in Manchester, focused on building remarkable digital experiences.',
+    url: 'https://camgreen.works',
+    siteName: 'https://camgreen.works',
+    images: [
+      {
+        url: '/images/og.png',
+        width: 1800,
+        height: 904,
+      },
+    ],
+    locale: 'en_GB',
+    type: 'website',
+  },
+}
 
-    return () => {
-      ctx.revert()
-    }
-  }, [pathname])
+export default function RootLayout({ children }) {
   return (
     <>
       <html lang='en'>
-        <title>{title}</title>
-        <meta name='image' content='/images/og.jpg'></meta>
+        {/* <title>{title}</title> */}
+        {/* <meta name='image' content='/images/og.jpg'></meta>
         <meta property='og:title' content='Cameron Green'></meta>
         <meta
           property='og:description'
           content='Cameron Green is a software engineer who focuses on developing remarkable digital experiences.'
         ></meta>
         <meta property='og:image' content='/images/og.jpg'></meta>
-        <meta property='og:type' content='website'></meta>
+        <meta property='og:type' content='website'></meta> */}
         <body className={HelveticaNeueExtended.className}>
+          <Smooth />
           <Nav />
           <div className='smooth-wrapper'>
             <div className='smooth-content'>
