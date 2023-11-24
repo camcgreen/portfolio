@@ -11,7 +11,11 @@ const Dome = () => {
   })
   return (
     <mesh ref={domeRef}>
-      <sphereGeometry args={[1.5, 32, 32]} />
+      <sphereGeometry
+        args={[1.5, 32, 32]}
+        scale={[-1, 1, 1]}
+        rotation={[0, Math.PI / 2, 0]}
+      />
       <lavaMaterial side={THREE.DoubleSide} />
     </mesh>
   )

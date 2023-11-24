@@ -27,7 +27,7 @@ const Header = () => {
     <header className={styles.header}>
       <Canvas camera={{ position: [0, 0, 1] }}>
         <Dome />
-        <Sphere position={[0, 0, 0]} scale={[1, 1, 1]} />
+        {/* <Sphere position={[0, 0, 0]} scale={[1, 1, 1]} /> */}
         <EffectComposer>
           <CustomDotScreen />
         </EffectComposer>
