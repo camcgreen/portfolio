@@ -41,7 +41,6 @@ export const detectMobile = () => {
 
   // Check for iPad
   if (isiPad()) {
-    alert('iPad')
     return true
   }
 
