@@ -2,8 +2,6 @@
 
 import React, { useEffect, useLayoutEffect, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { EffectComposer } from '@react-three/postprocessing'
-import { CustomDotScreen } from '@/app/shaders/PostProcess'
 import Dome from '@/app/components/Dome'
 import Sphere from '@/app/components/Sphere'
 import { initAnimLandingHeader } from '../utils/animations'
@@ -25,13 +23,10 @@ const Header = () => {
   }, [selectedIndex])
   return (
     <header className={styles.header}>
-      {/* <Canvas camera={{ position: [0, 0, 1] }}>
+      <Canvas camera={{ position: [0, 0, 1] }}>
         <Dome />
         <Sphere position={[0, 0, 0]} scale={[1, 1, 1]} />
-        <EffectComposer>
-          <CustomDotScreen />
-        </EffectComposer>
-      </Canvas> */}
+      </Canvas>
       <h1 id='split'>{TITLES[selectedIndex]}</h1>
       <img
         className={styles.scroll}

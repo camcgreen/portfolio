@@ -58,21 +58,19 @@ const LavaMaterial = shaderMaterial(
   }
 
   void main() {
-    // vec3 baseFirst = vec3(120.0 / 255.0, 158.0 / 255.0, 113.0 / 255.0);
     vec3 baseFirst = vec3(28.0 / 255.0, 58.0 / 255.0, 103.0 / 255.0);
     vec3 accent = vec3(0.0, 0.0, 0.0);
     vec3 baseSecond = vec3(224.0 / 255.0, 148.0 / 255.0, 66.0 / 255.0);
-    // vec3 baseThird = vec3(232.0 / 255.0, 201.0 / 255.0, 73.0 / 255.0);
     float n = noise(vPosition + uTime);
     vec3 color1 = vec3(1.0, 0.0, 0.0);
     vec3 color2 = vec3(0.0, 1.0, 0.0);
     vec3 color3 = vec3(0.0, 0.0, 1.0);
 
     vec2 baseUV = rotate2D(n) * vPosition.xy * 0.01;
-    float basePattern = lines(baseUV, 0.75);
+    float basePattern = lines(baseUV, 0.8);
     // control day and night
     float daylight = sin(uTime * 1.0);
-    float remappedDaylight = mix(0.3, 0.65, (daylight + 1.0) * 0.65);
+    float remappedDaylight = mix(0.25, 0.85, (daylight + 1.0) * 0.05);
     float secondPattern = lines(baseUV, remappedDaylight);
 
     vec3 baseColor = mix(baseSecond, baseFirst, basePattern);
