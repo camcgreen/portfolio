@@ -37,13 +37,19 @@ export const initAnimProjectHeader = () => {
       amount: 0.5,
     },
   })
-  gsap.from(img, {
-    duration: 2,
-    scaleX: 1.2,
-    scaleY: 1.2,
-    opacity: 0,
-    ease: 'power4.out',
-  })
+  gsap.fromTo(
+    img,
+    {
+      duration: 2,
+      scale: 1.2,
+    },
+    {
+      duration: 2,
+      ease: 'power4.out',
+      scale: 1,
+      opacity: 1,
+    }
+  )
 }
 
 export const initAnimLandingHeader = (intervalMs) => {
