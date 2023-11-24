@@ -89,7 +89,7 @@ export const initAnimLandingHeader = (intervalMs) => {
   }, intervalMs - 1500)
 }
 
-export const awaitImages = async () => {
+export const refreshScrollTriggerAfterImagesLoaded = async () => {
   const images = document.images
   const promises = Array.from(images).map((img) => {
     if (img.complete) {
