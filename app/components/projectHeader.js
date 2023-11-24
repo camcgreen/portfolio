@@ -1,5 +1,6 @@
 'use client'
 import React, { useLayoutEffect } from 'react'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import { initAnimProjectHeader } from '../utils/animations'
 import styles from '../styles/projectHeader.module.scss'
 
@@ -16,7 +17,14 @@ const ProjectHeader = ({ description, title, img }) => {
         </div>
       </div>
       <div className={styles.imgContainer}>
-        <img src={img} alt='' data-speed='0.1' id='img' />
+        <img
+          src={img}
+          alt=''
+          data-speed='0.1'
+          id='img'
+          // onLoad={ScrollTrigger.refresh()}
+          // onLoad={console.log('header image loaded')}
+        />
       </div>
     </div>
   )

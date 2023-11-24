@@ -1,4 +1,6 @@
 import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
+import { ScrollSmoother } from 'gsap/dist/ScrollSmoother'
 import { SplitText } from 'gsap/dist/SplitText'
 
 export const initAnimProjectHeader = () => {
@@ -85,4 +87,20 @@ export const initAnimLandingHeader = (intervalMs) => {
       },
     })
   }, intervalMs - 1500)
+}
+
+export const awaitImages = async () => {
+  const images = document.images
+  const promises = Array.from(images).map((img) => {
+    if (img.complete) {
+      return Promise.resolve()
+    }
+    return new Promise((resolve) => {
+      img.addEventListener('load', resolve)
+      img.addEventListener('error', resolve)
+    })
+  })
+
+  await Promise.all(promises)
+  ScrollTrigger.refresh()
 }

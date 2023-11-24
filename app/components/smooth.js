@@ -2,25 +2,25 @@
 import React, { useLayoutEffect } from 'react'
 import { usePathname } from 'next/navigation'
 import { detectMobile } from '../utils/helpers'
+import { awaitImages } from '../utils/animations'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import { ScrollSmoother } from 'gsap/dist/ScrollSmoother'
 
 const Smooth = () => {
   const pathname = usePathname()
+  const isMobile = detectMobile()
   useLayoutEffect(() => {
-    const isMobile = detectMobile()
+    awaitImages()
     let ctx = gsap.context(() => {
       gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
       window.history.scrollRestoration = 'manual'
-      const smoother = ScrollSmoother.create({
+      ScrollSmoother.create({
         wrapper: '.smooth-wrapper',
         content: '.smooth-content',
         smooth: 1,
         effects: isMobile ? false : true,
       })
-      ScrollTrigger.refresh()
-      smoother.refresh()
     })
     return () => {
       ctx.revert()
