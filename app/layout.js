@@ -52,15 +52,6 @@ export default function RootLayout({ children }) {
   return (
     <>
       <html lang='en'>
-        {/* <title>{title}</title> */}
-        {/* <meta name='image' content='/images/og.jpg'></meta>
-        <meta property='og:title' content='Cameron Green'></meta>
-        <meta
-          property='og:description'
-          content='Cameron Green is a software engineer who focuses on developing remarkable digital experiences.'
-        ></meta>
-        <meta property='og:image' content='/images/og.jpg'></meta>
-        <meta property='og:type' content='website'></meta> */}
         <body className={HelveticaNeueExtended.className}>
           <Smooth />
           <Nav />

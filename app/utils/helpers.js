@@ -15,3 +15,40 @@ export const getPageTitle = (pathname) => {
       break
   }
 }
+
+function isiPad() {
+  const userAgent = navigator.userAgent || navigator.vendor || window.opera
+  const iPad =
+    userAgent.match(/(iPad)/) /* iOS pre 13 */ ||
+    (navigator.platform === 'MacIntel' &&
+      navigator.maxTouchPoints > 1) /* iPad OS 13 */
+
+  return iPad
+}
+
+export const detectMobile = () => {
+  const userAgent = navigator.userAgent || navigator.vendor || window.opera
+
+  // Check for phones
+  if (/android/i.test(userAgent)) {
+    return true
+  }
+
+  // Check for iPhone
+  if (/iPhone/.test(userAgent) && !window.MSStream) {
+    return true
+  }
+
+  // Check for iPad
+  if (isiPad()) {
+    alert('iPad')
+    return true
+  }
+
+  // Check for other mobile devices
+  if (/Mobile|mini|Fennec|Windows Phone/i.test(userAgent)) {
+    return true
+  }
+
+  return false
+}
