@@ -32,7 +32,7 @@ const About = () => {
               I&apos;m currently focused on breathing life and interactivity
               into live and digital events at{' '}
               <a
-                href='https://voxelstudio.co.uk/'
+                href='https://voxelstudio.co.uk'
                 target='_blank'
                 rel='noopener noreferrer'
               >
@@ -43,8 +43,8 @@ const About = () => {
             </p>
             <p>
               For high profile clients, I&apos;ve built full-stack web apps with
-              Next.js and Firebase, native desktop apps with Electron, and iOS
-              apps with React Native.
+              Next.js, native desktop apps with Electron, iOS apps with React
+              Native, and sleek 3D agency portfolios with Three.js.
             </p>
             {/* <p>
               You find my GitHub{' '}
@@ -62,10 +62,10 @@ const About = () => {
             </p>
             <ul>
               <li>TypeScript</li>
-              <li>CSS Modules</li>
+              <li>Tailwind</li>
               <li>React & Next.js</li>
               <li>Electron</li>
-              <li>Node.js</li>
+              <li>Three.js & GLSL</li>
               <li>React Native</li>
             </ul>
           </div>
