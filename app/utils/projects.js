@@ -165,8 +165,8 @@ export const projectDetails = {
           well as reinforce and consolidate my frontend and 3D experience.
         </p>
         <p>
-          I became comfortable with Tailwind, which was a technology I'd not
-          used before and strengthened my TypeScript and data validation
+          I became comfortable with Tailwind, which was a technology I&apos;d
+          not used before and strengthened my TypeScript and data validation
           knowledge.
         </p>
       </>
