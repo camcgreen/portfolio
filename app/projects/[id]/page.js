@@ -72,7 +72,8 @@ const Project = () => {
                 loop
                 muted
                 webkit-playsinline={true}
-                playsInline
+                playsInline={true}
+                controlsList='nofullscreen'
               />
             </div>
           </div>
