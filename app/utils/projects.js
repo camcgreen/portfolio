@@ -47,7 +47,7 @@ export const projectDetails = {
           helper file does most of the heavy lifting for the authentication
           system. It uses Next Auth to handle the authentication flow, and then
           uses the Prisma Adapter to create a user in the database if one
-          doesn't already exist.
+          doesn&apos;t already exist.
         </p>
         <p>
           The Prisma{' '}
@@ -64,7 +64,7 @@ export const projectDetails = {
           TypeScript types are inferred from the Zod schema.
         </p>
         <p>
-          React Three Fiber renders the scene based on the user's input and
+          React Three Fiber renders the scene based on the user&apos;s input and
           responds in real time to any changes made from the toolbar.
         </p>
         <p>
@@ -76,7 +76,7 @@ export const projectDetails = {
           >
             Edge Store
           </a>{' '}
-          was used to store the image files used in the user's project.
+          was used to store the image files used in the user&apos;s project.
         </p>
       </>
     ),
@@ -88,8 +88,8 @@ export const projectDetails = {
           well as reinforce and consolidate my frontend and 3D experience.
         </p>
         <p>
-          I became comfortable with Tailwind, which was a technology I'd not
-          used before and strengthened my TypeScript and data validation
+          I became comfortable with Tailwind, which was a technology I&apos;d
+          not used before and strengthened my TypeScript and data validation
           knowledge.
         </p>
       </>
@@ -126,8 +126,8 @@ export const projectDetails = {
         <p>
           The infinite effect is created by calculating the width of the group
           of the image planes and then using that combined with the current
-          slide's X position to determine when to move the that slide to the end
-          of the group using the modulus operator (%).
+          slide&apos;s X position to determine when to move the that slide to
+          the end of the group using the modulus operator (%).
         </p>
         <p>
           I used GSAP and SplitText to create the hover effects and title text
@@ -146,7 +146,7 @@ export const projectDetails = {
             target='_blank'
             rel='noopener noreferrer'
           >
-            Drei's
+            Drei&apos;s
           </a>{' '}
           ShaderMaterial.
         </p>
