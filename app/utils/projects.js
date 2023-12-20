@@ -1,4 +1,178 @@
 export const projectDetails = {
+  spotlight: {
+    id: 'spotlight',
+    title: 'Spotlight',
+    description: (
+      <>
+        3D PRODUCT
+        <br />
+        MOCKUP CREATOR.
+      </>
+    ),
+    hero: '/images/hero-jobstasy.jpg',
+    tools:
+      'Next14, TypeScript, Tailwind, Next Auth, Prisma, Zod, Supabase & React Three Fiber.',
+    summary:
+      'Spotlight is a product mockup creator that provides an easy-to-use 3D editor to effortlessly capture beautiful renders of your apps.',
+    linkProject: 'https://getspotlight.vercel.app/',
+    linkRepo: 'https://github.com/camcgreen/spotlight',
+    imageSupp1: '/images/jobstasy-supp-1.jpg',
+    goal: (
+      <>
+        <p>
+          I was keen to create an app that made it really easy to capture the
+          product renders that you see on this site. I needed to make a fully
+          capable 3D editor, along with user authentication and a project save
+          system.
+        </p>
+        <p>
+          I chose Next.js as the framework, as it allowed relatively simple
+          authentication with Next Auth, as well as the ability to create APIs
+          to interface with the database with ease using the Prisma ORM.
+        </p>
+      </>
+    ),
+    imageFull1: '/images/jobstasy-full-1.jpg',
+    how: (
+      <>
+        <p>
+          The{' '}
+          <a
+            href='https://github.com/camcgreen/spotlight/blob/main/app/utils/auth.ts'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            auth.ts
+          </a>{' '}
+          helper file does most of the heavy lifting for the authentication
+          system. It uses Next Auth to handle the authentication flow, and then
+          uses the Prisma Adapter to create a user in the database if one
+          doesn't already exist.
+        </p>
+        <p>
+          The Prisma{' '}
+          <a
+            href='https://github.com/camcgreen/spotlight/blob/main/prisma/schema.prisma'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            schema
+          </a>{' '}
+          outlines the shape of the data for each project scene and user. Zod is
+          used to mirror this schema and handle data validation on both the
+          client and server, and safely catch and handle any errors. The
+          TypeScript types are inferred from the Zod schema.
+        </p>
+        <p>
+          React Three Fiber renders the scene based on the user's input and
+          responds in real time to any changes made from the toolbar.
+        </p>
+        <p>
+          Finally,{' '}
+          <a
+            href='https://edgestore.dev/'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            Edge Store
+          </a>{' '}
+          was used to store the image files used in the user's project.
+        </p>
+      </>
+    ),
+    imageSupp2: '/images/jobstasy-supp-2.jpg',
+    lessons: (
+      <>
+        <p>
+          This was a great project to extend my backend development skills, as
+          well as reinforce and consolidate my frontend and 3D experience.
+        </p>
+        <p>
+          I became comfortable with Tailwind, which was a technology I'd not
+          used before and strengthened my TypeScript and data validation
+          knowledge.
+        </p>
+      </>
+    ),
+    nextProject: '/projects/interactions-library',
+  },
+  'interactions-library': {
+    id: 'interactions-library',
+    title: 'Interactions Library',
+    description: (
+      <>
+        USER INTERFACE
+        <br />
+        MICROEXPERIMENTS.
+      </>
+    ),
+    hero: '/images/hero-jobstasy.jpg',
+    tools: 'React Three Fiber and custom GLSL shaders.',
+    summary:
+      'I wanted to create some little experiments to further my understanding of 3D on the web and how to create custom shaders.',
+    linkProject1: 'https://jelly-slider.vercel.app/',
+    linkProject2:
+      'https://codesandbox.io/p/sandbox/cuberto-style-scroll-shader-dy5v8t',
+    linkRepo: 'https://github.com/camcgreen/jelly-slider',
+    imageSupp1: '/images/jobstasy-supp-1.jpg',
+    goal: (
+      <>
+        <p>
+          This one is an infinite slider that uses the calculated scroll
+          position to smoothly interpolate the horizontal position of the
+          slides. It also uses a custom GLSL shader to create a jelly-like
+          effect on the edges of the slide based on the scroll velocity.
+        </p>
+        <p>
+          The infinite effect is created by calculating the width of the group
+          of the image planes and then using that combined with the current
+          slide's X position to determine when to move the that slide to the end
+          of the group using the modulus operator (%).
+        </p>
+        <p>
+          I used GSAP and SplitText to create the hover effects and title text
+          animations.
+        </p>
+      </>
+    ),
+    imageFull1: '/images/jobstasy-full-1.jpg',
+    how: (
+      <>
+        <p>
+          This was one of the first custom fragment shaders I built, with the
+          assistance of{' '}
+          <a
+            href='https://github.com/pmndrs/drei'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            Drei's
+          </a>{' '}
+          ShaderMaterial.
+        </p>
+        <p>
+          The current scroll position is calculated and used to interpolate
+          between the two provided image textures based on the noise texture
+          used.
+        </p>
+      </>
+    ),
+    imageSupp2: '/images/jobstasy-supp-2.jpg',
+    lessons: (
+      <>
+        <p>
+          This was a great project to extend my backend development skills, as
+          well as reinforce and consolidate my frontend and 3D experience.
+        </p>
+        <p>
+          I became comfortable with Tailwind, which was a technology I'd not
+          used before and strengthened my TypeScript and data validation
+          knowledge.
+        </p>
+      </>
+    ),
+    nextProject: '/projects/spotlight',
+  },
   jobstasy: {
     id: 'jobstasy',
     title: 'Jobstasy',

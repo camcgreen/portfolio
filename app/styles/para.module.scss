@@ -2,14 +2,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  // align-items: flex-end;
 }
 
 .copy {
   p {
     margin-bottom: 20px;
     max-width: 650px;
-    // text-align: end;
+    font-size: 1.25rem;
     &:last-of-type {
       margin-bottom: 100px;
     }

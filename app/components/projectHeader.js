@@ -17,14 +17,7 @@ const ProjectHeader = ({ description, title, img }) => {
         </div>
       </div>
       <div className={styles.imgContainer}>
-        <img
-          src={img}
-          alt=''
-          data-speed='0.1'
-          id='img'
-          // onLoad={ScrollTrigger.refresh()}
-          // onLoad={console.log('header image loaded')}
-        />
+        <img src={img} alt='' data-speed='0.1' id='img' />
       </div>
     </div>
   )

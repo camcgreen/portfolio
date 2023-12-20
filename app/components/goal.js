@@ -3,10 +3,10 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import Para from './para'
 import styles from '../styles/goal.module.scss'
 
-const Goal = ({ copy, img }) => {
+const Goal = ({ copy, img, alt }) => {
   return (
     <div className={styles.container}>
-      <Para heading='THE GOAL.' copy={copy}>
+      <Para heading={alt ? 'JELLY SLIDER' : 'THE GOAL.'} copy={copy}>
         <div className={styles.imgContainer}>
           <img
             src={img}

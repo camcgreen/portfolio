@@ -13,9 +13,9 @@ import styles from '../../styles/project.module.scss'
 
 const Project = () => {
   const params = useParams()
+  console.log(params)
   const proj = projectDetails[params.id]
-  const index = findProjIndex(projectDetails, params.id)
-  const nextIndex = (index + 1) % Object.keys(projectDetails).length
+  console.log(projectDetails)
   return (
     proj && (
       <>
@@ -29,9 +29,12 @@ const Project = () => {
             img={proj.hero}
           />
           <ProjectInfo
+            id={proj.id}
             tools={proj.tools}
             summary={proj.summary}
             linkProject={proj.linkProject}
+            linkProject1={proj.linkProject1}
+            linkProject2={proj.linkProject2}
             linkRepo={proj.linkRepo}
           />
           <div className={styles.centre}>
@@ -39,22 +42,30 @@ const Project = () => {
               <img src={proj.imageSupp1} alt='' />
             </div>
           </div>
-          <Goal copy={proj.goal} img={proj.imageFull1} />
-          <Para heading='HOW IT WORKS.' copy={proj.how} />
+          <Goal
+            copy={proj.goal}
+            img={proj.imageFull1}
+            alt={proj.id === 'interactions-library'}
+          />
+          <Para
+            heading={
+              proj.id === 'interactions-library'
+                ? 'SCROLL SHADER'
+                : 'HOW IT WORKS.'
+            }
+            copy={proj.how}
+          />
           <div className={styles.centre}>
             <div className='wrapper'>
               <img src={proj.imageSupp2} alt='' />
             </div>
           </div>
-          <Para heading='LESSONS LEARNED.' copy={proj.lessons} />
+          {proj.id !== 'interactions-library' && (
+            <Para heading='LESSONS LEARNED.' copy={proj.lessons} />
+          )}
           <div className={styles.centre}>
             <div className='wrapper'>
-              <Link
-                href={
-                  index !== -1 &&
-                  `/projects/${Object.keys(projectDetails)[nextIndex]}`
-                }
-              >
+              <Link href={proj.nextProject}>
                 <button>
                   <p>Next project</p>
                 </button>

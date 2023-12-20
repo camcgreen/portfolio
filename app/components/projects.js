@@ -20,29 +20,29 @@ const Projects = () => {
             MY WORK.
           </h2>
           <div className={styles.project}>
-            <Link href='/projects/jobstasy'>
+            <Link href='/projects/spotlight'>
               <div className={styles.hero}>
                 <img
                   src='/images/hero-jobstasy.jpg'
-                  alt='Jobstasy hero image'
+                  alt='Spotlight hero image'
                   data-speed='auto'
                 />
               </div>
             </Link>
-            <h4>Jobstasy</h4>
+            <h4>Spotlight</h4>
             <h3>
-              Remote job
+              3D product
               <br />
-              search platform.
+              mockup creator.
             </h3>
             <div className={styles.links}>
-              <Link href='/projects/jobstasy'>
+              <Link href='/projects/spotlight'>
                 <button>
                   <p>View project</p>
                 </button>
               </Link>
               <a
-                href='https://github.com/camcgreen/jobstasy'
+                href='https://github.com/camcgreen/spotlight'
                 target='_blank'
                 rel='noopener noreferrer'
               >
@@ -64,20 +64,20 @@ const Projects = () => {
                 />
               </div>
             </Link>
-            <h4>Chatbox</h4>
+            <h4>Interactions Library</h4>
             <h3>
-              Real time
+              User interface
               <br />
-              chat application.
+              microexperiments.
             </h3>
             <div className={styles.links}>
-              <Link href='/projects/chatbox'>
+              <Link href='/projects/interactions-library'>
                 <button>
                   <p>View project</p>
                 </button>
               </Link>
               <a
-                href='https://github.com/camcgreeen/chatbox'
+                href='https://github.com/camcgreen/jelly-slider'
                 target='_blank'
                 rel='noopener noreferrer'
               >
