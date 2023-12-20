@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
 import { findProjIndex } from '../../utils/helpers'
@@ -12,6 +12,7 @@ import { useParams } from 'next/navigation'
 import styles from '../../styles/project.module.scss'
 
 const Project = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768)
   const params = useParams()
   console.log(params)
   const proj = projectDetails[params.id]
@@ -43,7 +44,8 @@ const Project = () => {
               <video
                 src={proj.vid1}
                 className={styles.vid}
-                autoPlay
+                autoPlay={!isMobile}
+                controls={isMobile}
                 loop
                 muted
               />
@@ -68,12 +70,11 @@ const Project = () => {
               <video
                 src={proj.vid2}
                 className={styles.vid}
-                autoPlay
+                autoPlay={!isMobile}
+                controls={isMobile}
                 loop
                 muted
-                webkit-playsinline={true}
-                playsInline={true}
-                controlsList='nofullscreen'
+                playsInline
               />
             </div>
           </div>
