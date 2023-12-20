@@ -39,7 +39,14 @@ const Project = () => {
           />
           <div className={styles.centre}>
             <div className='wrapper'>
-              <img src={proj.imageSupp1} alt='' />
+              {/* <img src={proj.imageSupp1} alt='' /> */}
+              <video
+                src={proj.vid1}
+                className={styles.vid}
+                autoPlay
+                loop
+                muted
+              />
             </div>
           </div>
           <Goal
@@ -57,7 +64,16 @@ const Project = () => {
           />
           <div className={styles.centre}>
             <div className='wrapper'>
-              <img src={proj.imageSupp2} alt='' />
+              {/* <img src={proj.imageSupp2} alt='' /> */}
+              <video
+                src={proj.vid2}
+                className={styles.vid}
+                autoPlay
+                loop
+                muted
+                webkit-playsinline={true}
+                playsInline
+              />
             </div>
           </div>
           {proj.id !== 'interactions-library' && (

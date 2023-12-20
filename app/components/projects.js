@@ -23,7 +23,7 @@ const Projects = () => {
             <Link href='/projects/spotlight'>
               <div className={styles.hero}>
                 <img
-                  src='/images/hero-jobstasy.jpg'
+                  src='/images/hero-spotlight.jpg'
                   alt='Spotlight hero image'
                   data-speed='auto'
                 />
@@ -55,10 +55,10 @@ const Projects = () => {
             </div>
           </div>
           <div className={styles.project}>
-            <Link href='/projects/chatbox'>
+            <Link href='/projects/interactions-library'>
               <div className={styles.hero}>
                 <img
-                  src='/images/hero-chatbox.jpg'
+                  src='/images/hero-interactions.jpg'
                   alt='Chatbox hero image'
                   data-speed='auto'
                 />

@@ -9,7 +9,7 @@ export const projectDetails = {
         MOCKUP CREATOR.
       </>
     ),
-    hero: '/images/hero-jobstasy.jpg',
+    hero: '/images/hero-spotlight.jpg',
     tools:
       'Next14, TypeScript, Tailwind, Next Auth, Prisma, Zod, Supabase & React Three Fiber.',
     summary:
@@ -17,6 +17,7 @@ export const projectDetails = {
     linkProject: 'https://getspotlight.vercel.app/',
     linkRepo: 'https://github.com/camcgreen/spotlight',
     imageSupp1: '/images/jobstasy-supp-1.jpg',
+    vid1: '/videos/spotlight-1.mp4',
     goal: (
       <>
         <p>
@@ -32,7 +33,7 @@ export const projectDetails = {
         </p>
       </>
     ),
-    imageFull1: '/images/jobstasy-full-1.jpg',
+    imageFull1: '/images/spotlight-full-1.jpg',
     how: (
       <>
         <p>
@@ -81,6 +82,7 @@ export const projectDetails = {
       </>
     ),
     imageSupp2: '/images/jobstasy-supp-2.jpg',
+    vid2: '/videos/spotlight-2.mp4',
     lessons: (
       <>
         <p>
@@ -106,7 +108,7 @@ export const projectDetails = {
         MICROEXPERIMENTS.
       </>
     ),
-    hero: '/images/hero-jobstasy.jpg',
+    hero: '/images/hero-interactions.jpg',
     tools: 'React Three Fiber and custom GLSL shaders.',
     summary:
       'I wanted to create some little experiments to further my understanding of 3D on the web and how to create custom shaders.',
@@ -115,6 +117,7 @@ export const projectDetails = {
       'https://codesandbox.io/p/sandbox/cuberto-style-scroll-shader-dy5v8t',
     linkRepo: 'https://github.com/camcgreen/jelly-slider',
     imageSupp1: '/images/jobstasy-supp-1.jpg',
+    vid1: '/videos/jelly-slider.mp4',
     goal: (
       <>
         <p>
@@ -135,7 +138,7 @@ export const projectDetails = {
         </p>
       </>
     ),
-    imageFull1: '/images/jobstasy-full-1.jpg',
+    imageFull1: '/images/interactions-full-1.jpg',
     how: (
       <>
         <p>
@@ -158,6 +161,7 @@ export const projectDetails = {
       </>
     ),
     imageSupp2: '/images/jobstasy-supp-2.jpg',
+    vid2: '/videos/scroll-shader.mp4',
     lessons: (
       <>
         <p>
