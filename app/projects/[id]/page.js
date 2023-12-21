@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
 import { findProjIndex } from '../../utils/helpers'
@@ -12,17 +12,15 @@ import { useParams } from 'next/navigation'
 import styles from '../../styles/project.module.scss'
 
 const Project = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768)
+  const [isMobile, setIsMobile] = useState(false)
   const params = useParams()
-  console.log(params)
   const proj = projectDetails[params.id]
-  console.log(projectDetails)
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 768)
+  }, [])
   return (
     proj && (
       <>
-        <Head>
-          <title>Yo</title>
-        </Head>
         <main>
           <ProjectHeader
             description={proj.description}
