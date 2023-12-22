@@ -25,8 +25,9 @@ const About = () => {
           <div className={styles.description}>
             <p>
               My name&apos;s Cam and I&apos;m a software engineer based in
-              Manchester, UK. I focus on developing (and designing) remarkable
-              digital experiences.
+              Manchester, UK.
+              {/* I focus on developing (and designing) remarkable
+              digital experiences. */}
             </p>
             <p>
               I&apos;m currently focused on breathing life and interactivity
