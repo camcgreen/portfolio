@@ -2,14 +2,14 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
-import { findProjIndex } from '../../utils/helpers'
-import ProjectHeader from '../../components/projectHeader'
-import ProjectInfo from '../../components/projectInfo'
-import Goal from '../../components/goal'
-import Para from '../../components/para'
-import { projectDetails } from '../../utils/projects'
+import { findProjIndex } from '../../../utils/helpers'
+import ProjectHeader from '../../../components/projectHeader'
+import ProjectInfo from '../../../components/projectInfo'
+import Goal from '../../../components/goal'
+import Para from '../../../components/para'
+import { projectDetails } from '../../../utils/projects'
 import { useParams } from 'next/navigation'
-import styles from '../../styles/project.module.scss'
+import styles from '../../../styles/project.module.scss'
 
 const Project = () => {
   const [isMobile, setIsMobile] = useState(false)
