@@ -24,7 +24,7 @@ const About = () => {
           </div>
           <div className={styles.description}>
             <p>
-              My name&apos;s Cam and I&apos;m a Software Developer based in
+              My name&apos;s Cam and I&apos;m a software developer based in
               Manchester, UK.
               {/* I focus on developing (and designing) remarkable
               digital experiences. */}
