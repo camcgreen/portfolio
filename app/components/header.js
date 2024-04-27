@@ -2,6 +2,7 @@
 
 import React, { useEffect, useLayoutEffect, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
+import { Stats } from '@react-three/drei'
 import Dome from '@/app/components/Dome'
 import Sphere from '@/app/components/Sphere'
 import { initAnimLandingHeader } from '../utils/animations'
@@ -26,6 +27,7 @@ const Header = () => {
       <Canvas camera={{ position: [0, 0, 1] }}>
         <Dome />
         <Sphere position={[0, 0, 0]} scale={[1, 1, 1]} />
+        {/* <Stats /> */}
       </Canvas>
       <h1 id='split'>{TITLES[selectedIndex]}</h1>
       <img
