@@ -3,7 +3,7 @@ Frontend Developer
 
 hello@camgreen.works 07464753049 camgreen.works github.com/camcgreen
 Profile
-Detail driven Frontend Developer with proven experience in building web and desktop apps for high profile clients, and an eye for what looks good. Incredibly curious and eager to solve challenging new problems, and build products that people love.
+Detail driven Frontend Developer with over three years of proven experience in building web and desktop apps for high profile clients, and an eye for what looks good. Incredibly curious and eager to solve challenging new problems, and build products that people love.
 Experience
 Voxel Studio, Manchester, England
 Frontend Developer | June 2021 - Present
